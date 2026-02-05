@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Center</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+       background: #7b0f12;
+    }
+
+    /* BACKGROUND BLUR */
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url("img/img (1).jpeg") center / cover no-repeat;
+      filter: blur(40px) brightness(0.9);
+      transform: scale(1.1);
+      z-index: -1;
+    }
+
+    /* GAMBAR UTAMA */
+    img {
+      max-width: 70%;
+      max-height: 80vh;
+      display: block;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+    }
+  </style>
+</head>
+
+<body>
+
+  <img src="img/img (3).png" alt="center image">
+
+</body>
+</html>
